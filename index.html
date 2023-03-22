@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css"></link>
+</head>
+<body>
+    <div id="header">
+        <nav class="navbar navbar-expand-lg bg-light navbar-primary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="./assets/img/logo.png" alt="" class="logo">
+                SHOWS
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Watch later</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex ml-auto m-1" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="input">
+                        <button class="btn btn-outline-success btn_Search" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+          </nav>
+        
+    </div>
+
+    <!-- Container  -->
+    <div class="container-fluid mt-2 " id="content">
+        <div class="row justify-content-center mx-4" id="card">
+        </div>
+    </div>
+
+    <div id="footer">
+        <div class="container-fluid bg-dark" id="content">
+            <div class="row justify-content-center mx-4">
+                <img src="./assets/img/logo-white.png" class="footer_logo"alt="HBO logo" srcset="">
+            </div>
+            <div class="row justify-content-center">
+                <a href="#" class="col-2 link-secondary text-center">ABOUT</a>
+                <a href="#" class="col-2 link-secondary text-center">GET HBO</a>
+                <a href="#" class="col-2 link-secondary text-center">HELP</a>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <p class="footer-p">© 2023 Home Box Office, Inc. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    
+    <script src="./assets/index.js" type="module"></script>
+</body>
+</html>

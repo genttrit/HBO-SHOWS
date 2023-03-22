@@ -1,0 +1,28 @@
+.logo{
+    height: 30px;
+}
+
+nav{
+    border: solid grey 1px;
+    margin:0;
+    border-radius: 10px;
+}
+
+.card{
+    width: 14rem;
+}
+
+#id{
+    color: antiquewhite;    
+}
+
+.footer_logo{
+    width: 150px;
+    height: auto;
+}
+
+.footer-p{
+    margin-top: 10px;
+    text-align: center;
+    color: grey;
+}
