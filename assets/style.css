@@ -26,3 +26,13 @@ nav{
     text-align: center;
     color: grey;
 }
+
+
+
+/* SHOW Details CSS */
+
+.show-img{
+    width: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
