@@ -18,9 +18,9 @@ export function Header() {
                             <a class="nav-link active" aria-current="page" href="#">Watch later</a>
                         </li>
                     </ul>
-                    <form class="d-flex ml-auto m-1" role="search">
+                    <form class="d-flex ml-auto m-1 submit" role="search">
                         <input id="input" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
+                        <button class="btn btn-outline-success search" type="submit">Search</button>
                     </form>
                 </div>
             </div>
