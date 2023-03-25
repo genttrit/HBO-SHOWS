@@ -8,8 +8,19 @@ nav{
     border-radius: 10px;
 }
 
+.nav-link:hover {
+    background-color: rgb(56, 54, 54);
+    color: rgb(215, 215, 215);
+    transition: 0.1s 0.5s all ease-in-out;
+    border-radius: 5px;
+}
+
 .card{
     width: 14rem;
+}
+
+.card-img-top:hover{
+    opacity: 0.2;
 }
 
 #id{
@@ -36,3 +47,14 @@ nav{
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+
+/*Alert*/
+#message-container {
+    position: fixed;
+    top: 50px;
+    left: 50px;
+    width: auto;
+    padding: 5px 20px;
+    z-index: 100;
+  }
