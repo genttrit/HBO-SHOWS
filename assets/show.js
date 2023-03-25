@@ -12,8 +12,7 @@ content.innerHTML = ShowContent();
 const footer = document.getElementById('footer');
 footer.innerHTML = Footer();
 
-
-
+//marrja e ID se SHOW edhe thirrja e kartes se show
 const show_url = window.location.href;
 const url_index = show_url.indexOf('?')+4;
 const show_code = show_url.slice(url_index);
@@ -23,6 +22,7 @@ getShowCard(show_code);
 
 //https://api.tvmaze.com/lookup/shows?thetvdb=81189
 
+//Selektimi i elementeve ne DOM
 const show_img = document.querySelector('.show-img');
 const show_title = document.querySelector('.show-title');
 const show_genre = document.querySelector('.show-genre');
@@ -32,7 +32,7 @@ const show_summary = document.querySelector('.show-summary');
 const wl_button = document.getElementById('wl_button');
 const d_button = document.getElementById('d_button');
 
-
+//Thirrja e API
 async function getShowCard(code){
     const url = `https://api.tvmaze.com/lookup/shows?thetvdb=${code}`;
     const resp = await axios.get(url);
@@ -57,28 +57,33 @@ async function getShowCard(code){
 }
 
 
-
-// const input = document.getElementById('input');
-// input.addEventListener('input',()=>{
-//     content.innerHTML = '';
-//     console.log(input.value);
-//     Search(input.value)
-// })
-
 //Show results after pressing Enter or submit button
-const form = document.querySelector('.submit');
-
-form.addEventListener('submit', (e)=>{
-    e.preventDefault();
-    console.log(input.value)
-    const search_title = input.value;
-
-    localStorage.setItem('search_title',search_title);
+const button = document.querySelector('#searchButton');
+button.addEventListener('click', (e) => {
+  e.preventDefault();
+  const searchValue = input.value;
+  console.log(searchValue);
+  localStorage.setItem('search_title',searchValue);
     const url = `index.html`;
     window.open(url,'SHOW')
-})
+});
 
 
+
+//
+// const form = document.querySelector('.submit');
+
+// form.addEventListener('submit', (e)=>{
+//     e.preventDefault();
+//     console.log(input.value)
+//     const search_title = input.value;
+
+//     localStorage.setItem('search_title',search_title);
+//     const url = `index.html`;
+//     window.open(url,'SHOW')
+// })
+
+//
 
 
 

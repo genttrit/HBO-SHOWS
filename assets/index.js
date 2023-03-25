@@ -1,6 +1,5 @@
 import {Header} from './header.js';
 import {Footer} from './footer.js';
-//ALERT
 import {Alert} from './Alert.js';  
 
 const header = document.getElementById('header');
@@ -10,13 +9,14 @@ const footer = document.getElementById('footer');
 footer.innerHTML = Footer();
 
 //Search prej faqes show.html kur bohet
-// if(localStorage.getItem('search_title') != null){
-//     let src_title = localStorage.getItem('search_title');
-//     getShow(src_title);
-//     localStorage.removeItem('search_title');
-// } else {
-//     getShow('home');
-// }
+if(localStorage.getItem('search_title') != null){
+    let src_title = localStorage.getItem('search_title');
+    getShow('home');
+    getShow(src_title);
+    localStorage.removeItem('search_title');
+} else {
+    getShow('home');
+}
 
 //Show results as we type
 const input = document.getElementById('input');
@@ -35,13 +35,6 @@ button.addEventListener('click', (e) => {
   console.log(searchValue);
   getShow(input.value);
 });
-
-//show search results as we type
-// const input = document.getElementById('input');
-// // input.addEventListener('input',()=>{
-// //     console.log(input.value);
-// //     getShow(input.value)
-// // })
 
 function getShowCard() {
     return `
@@ -62,23 +55,17 @@ for(let i=0; i<10; i++){ //resp.data.length
     content.innerHTML += getShowCard();
 }
 
-getShow('home');
-
 
 async function getShow(title){
     const url = `https://api.tvmaze.com/search/shows?q=${title}`;
     const resp = await axios.get(url);
     console.log(resp.data)
-    
-    //localStorage.removeItem('search_title');
-    // content.innerHTML ='';
-    
+        
     const card_img = document.getElementsByClassName('card-img-top');
     const card_title = document.getElementsByClassName('card-title');
     const card_genres = document.getElementsByClassName('card-text');
     const card_details = document.getElementsByClassName('details');
     const card_watchLater = document.getElementsByClassName('watch-later');
-
 
     for(let i=0; i<10; i++){ //resp.data.length
         card_title[i].innerHTML = resp.data[i].show.name;
