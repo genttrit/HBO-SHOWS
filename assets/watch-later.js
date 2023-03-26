@@ -51,6 +51,8 @@ for(let i=0; i<wl_array.length; i++){
                 wl_array.splice(index, 1);
                 localStorage.setItem('wl_array',JSON.stringify(wl_array));
                 location.reload();
+            }else{
+                index++;
             }
 
             // console.log(`Bolean result:  ${elem.externals.thetvdb}`);
