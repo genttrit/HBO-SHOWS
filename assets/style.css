@@ -58,3 +58,18 @@ nav{
     padding: 5px 20px;
     z-index: 100;
   }
+
+
+  /* Watch list */
+  .wl_card{
+    height: 150px;
+    border: 1px solid grey;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .wl_img{
+    height: 140px;
+    padding: 5px 0;
+    margin-left:-40px;
+  }

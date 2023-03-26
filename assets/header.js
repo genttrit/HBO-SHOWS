@@ -15,7 +15,7 @@ export function Header() {
                             <a class="nav-link" aria-current="page" href="/">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">Watch later</a>
+                            <a class="nav-link" aria-current="page" href="./wl.html">Watch later</a>
                         </li>
                     </ul>
                     <form class="d-flex ml-auto m-1 submit" role="search">
