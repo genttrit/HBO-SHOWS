@@ -20,3 +20,13 @@ content.innerHTML += wlContent();
 
 // // content.innerHTML = "HELLO";
 // // content.innerHTML = ShowContent();
+
+const button = document.querySelector('#searchButton');
+button.addEventListener('click', (e) => {
+  e.preventDefault();
+  const searchValue = input.value;
+  console.log(searchValue);
+  localStorage.setItem('search_title',searchValue);
+    const url = `index.html`;
+    window.open(url,'SHOW')
+});
