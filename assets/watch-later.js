@@ -12,7 +12,7 @@ footer.innerHTML = Footer();
 
 const content = document.getElementById('wl_container');
 
-content.innerHTML = wlContent();
+content.innerHTML += wlContent();
 content.innerHTML += wlContent();
 content.innerHTML += wlContent();
 

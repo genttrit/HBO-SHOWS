@@ -39,13 +39,15 @@ button.addEventListener('click', (e) => {
 function getShowCard() {
     return `
     <div class="card mx-2 mb-3 col-sm-2">
-    <img src="" class="card-img-top" alt="...">
-    <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text"></p>
-        <a href="#" class="details btn btn-sm btn-outline-secondary">Details</a>
-        <a href="#" class="watch-later btn btn-sm btn-outline-dark">Watch later</a>
-    </div>  
+        <img src="" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+        </div>
+        <div class="m-2 d-flex justify-content-around">
+            <a href="#" class="details btn btn-sm btn-outline-secondary">Details</a>
+            <a href="#" class="watch-later btn btn-sm btn-outline-dark">Watch later</a>
+        </div>
     </div>`;
 }
 
