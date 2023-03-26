@@ -12,9 +12,32 @@ footer.innerHTML = Footer();
 
 const content = document.getElementById('wl_container');
 
-content.innerHTML += wlContent();
-content.innerHTML += wlContent();
-content.innerHTML += wlContent();
+const wl_array = JSON.parse(localStorage.getItem('wl_array'));
+console.log(wl_array);
+
+wl_array.forEach(e => {
+    content.innerHTML += wlContent();
+    console.log(e);
+});
+
+const wl_img = document.getElementsByClassName('wl_img');
+const wl_title = document.getElementsByClassName('wl_title');
+const wl_genre = document.getElementsByClassName('wl_genre');
+const wl_year = document.getElementsByClassName('wl_year');
+const wl_details = document.getElementsByClassName('wl_details');
+const wl_remove = document.getElementsByClassName('wl_remove');
+
+for(let i=0; i<wl_array.length; i++){
+    wl_img[i].setAttribute('src',wl_array[i].image.medium)
+    wl_title[i].innerHTML = wl_array[i].name;
+    wl_genre[i].innerHTML = wl_array[i].genres;
+    wl_year[i].innerHTML = wl_array[i].premiered.slice(0,4);
+    wl_details[i].addEventListener('click', ()=>{
+        const card_id = wl_array[i].externals.thetvdb;
+        const url = `show.html?id=${card_id}`;
+        window.open(url,'SHOW')
+    })
+}
 
 // const content = document.querySelector('.container');
 
